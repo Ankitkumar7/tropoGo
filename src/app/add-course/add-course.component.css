@@ -1,0 +1,108 @@
+/* * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 64px;
+  }
+
+  .heading-type {
+      font-family: 'Manrope-ExtraBold';
+      font-size: 36px;
+  }
+
+  .form-inline {  
+    margin-top:-19px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+    font-weight: bold;
+  }
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+    
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .square {
+    height: 50px;
+    width: 50px;
+    flex-direction: row;
+    background-color: #555;
+  }
+
+ .image-set {
+      background: grey;
+  }
+
+#li_1 label.choice {
+	display:inline;
+	position:relative;
+	margin-left: 0.2em;
+	_top:0.2em;
+}
+
+#li_2 label.choice {
+	display:inline;
+	position:relative;
+	margin-left: 0.2em;
+	_top:0.2em;
+}
+
+#li_1 input.radio {
+	display: inline;
+	margin-left: 0.5em;
+}
+
+#li_2 input.radio {
+	display: inline;
+	margin-left: 0.5em;
+} */
+
+
+.upload-btn {
+  width: 23px;
+    margin-top: -5px;
+}
+
+.box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+  background-color: grey;
+
+}
+

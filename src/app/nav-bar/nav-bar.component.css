@@ -1,0 +1,32 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+} */
+
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+
+    color:#ecf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    box-shadow:0 4px 13px -2px rgb(0 0 0 / 18%);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+
+}
+
+
+

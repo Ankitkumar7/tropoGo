@@ -1,0 +1,130 @@
+<div class="container">
+<h2 class="heading-type">Add course details</h2>
+
+  <form [formGroup]="courseForm">
+    <div class="form-group">
+      <label style="font-weight: bold;" for="exampleInputEmail1">Course Name</label>
+      <input formControlName="courseName" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add course name">
+    </div>
+    <div class="form-group">
+      <label style="font-weight: bold;" for="exampleInputPassword1">Previous Course Gallery
+      </label>  <p class="text-right"><img class="upload-btn" src="../../assets/icon/ic_upload.png">&nbsp;UPLOAD</p>
+      <button  style="width: 42px;height: 36px;" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+     
+      </button>
+      &nbsp;
+      <button style="width: 42px;height: 36px;"  type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      
+      </button>
+      &nbsp;
+      <button style="width: 42px;height: 36px;"  type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+      sagittis lacus vel augue laoreet rutrum faucibus.">
+       
+      </button>
+      &nbsp;
+      <button style="width: 42px;height: 36px;"  type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        
+      </button>
+     <br>
+    </div>
+    <label style="font-weight: bold;" for="exampleInputEmail1">Aircraft Type</label><br>
+    <div class="form-check form-check-inline">
+      <input formControlName="aircraftType" class="form-check-input" type="radio" id="Multi Rotar" value="Multi Rotar" >
+      <label class="form-check-label" for="Multi Rotar">Multi Rotar</label>
+    </div>
+   
+    <div class="form-check form-check-inline">
+      <input formControlName="aircraftType"  class="form-check-input" type="radio" id="Fixed Wing" value="Fixed Wing">
+      <label class="form-check-label" for="Fixed Wing">Fixed Wing</label>
+    </div>
+   
+    <!-- table -->
+    <br>
+    <br>
+    <div [formGroup]="courseForm">
+      <table class="table table table-striped">
+        <thead>
+          <tr>
+            <th style="width: 150px;">Batch</th>
+            <th>Batch Start Date </th>
+            <th>Batch Start Date </th>
+            <th> </th>
+  
+          </tr>
+          
+        </thead>
+        <ng-container formArrayName="batches"
+        *ngFor="let item of courseForm.get('batches')['controls']; let i = index;">
+          <tbody [formGroupName]="i">
+            <tr>
+              <td>Batch {{i+1}}</td>
+              <td>
+                <input type="date">
+              </td>
+              <td><input type="date"></td>
+              <td >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+
+                <img (click)="expand(i)" src="../../assets/icon/ic_collapse.png">
+              </td>
+           </tr>
+           <tr *ngIf="courseForm.get('batches')['controls'][i].value.isHide">
+            <td></td>
+            <td>
+              Course Location
+              <select formControlName="courseLocation"  class="form-control form-control">
+                <option value="" disabled default>Select Location</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Bengaluru"> Bengaluru</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Chennai">Chennai</option>
+
+    
+              </select>
+            </td>
+            <td></td>
+            <td>
+            </td>
+         </tr>
+    
+         <tr *ngIf="courseForm.get('batches')['controls'][i].value.isHide">
+          <td></td>
+          <td>
+            Course Language
+            <select formControlName="courseLanguage" multiple class="form-control form-control">
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Marathi</option>
+              <option>Bengali</option>
+              <option>Telgu</option>
+              <option>Gujrati</option>
+            </select>
+            <small>CTRL+ to select multiple</small>
+          </td>
+          <td>  
+            Course Cost (Ex  GST) 
+            <input formControlName="courseCost" class="form-control" type="number" placeholder="RS.">
+          <td>  
+          </td>
+       </tr>
+    
+    
+          </tbody>
+        </ng-container>
+     
+      </table>
+    </div>
+    
+    <hr>
+    <div (click)="addAnotherCourse()">
+      <img src="../../assets/icon/ic_addcourse.png"> &nbsp;<label style="color:#03C772">ADD ANOTHER COURSE DATE</label>
+    </div>
+    <div  class="form-group">
+      <label for="exampleFormControlTextarea1">COURSE DETAILS</label>
+      <textarea placeholder="Add details" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  
+  </form>
+   </div>
+
